@@ -1,0 +1,16 @@
+<a href='invalid-url' disabled></a>
+<input value="something">
+
+<SomeComponent @arg="value"/>
+<SomeComponent @arg=1/>
+<SomeComponent @arg=foo/>
+<SomeComponent @arg={{get foo "0.prop"}} @bar={{property}} />
+<MyAddon$MyComponent @arg={{get foo "0.prop"}} @bar={{property}} />
+<MyAddon$Namespace::MyComponent @arg={{get foo "0.prop"}} @bar={{property}} />
+<SomeComponent @arg={{get foo "0.prop"}} @bar={{fn myAction}} />
+<Select
+    data-test-select
+    @items={{get foo "0.prop"}}
+    @onSelectItem={{action "setValue"}}
+    @selectedValue={{foo}}
+/>

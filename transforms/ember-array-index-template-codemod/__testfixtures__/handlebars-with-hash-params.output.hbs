@@ -1,0 +1,9 @@
+{{my-component arg="string"}}
+{{my-component arg=2}}
+{{my-component arg=(get foo "0.prop")}}
+{{my-component arg=property}}
+{{my-component arg=(my-helper (get foo "0.prop"))}}
+{{my-component arg=(my-helper (fn myAction property) (get foo "0.prop"))}}
+{{my-component arg=property arg2=(get foo "0.prop")}}
+{{my-component arg=property arg2=(fn myAction (get foo "0.prop"))}}
+
