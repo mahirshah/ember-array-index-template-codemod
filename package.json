@@ -1,6 +1,6 @@
 {
   "name": "ember-array-index-template-codemod",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Codemods for transforming template array access to use get helper where appropriate",
   "homepage": "https://github.com/mahirshah/ember-array-index-template-codemod#readme",
   "bugs": {
