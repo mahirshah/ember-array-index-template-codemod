@@ -51,7 +51,13 @@ function transformToGetHelper() {
  * and the string literal path to be used as params to a get helper expression
  */
 function getHelperParams(pathExpressionNode, firstPathIndex) {
-  const path = builders.path(pathExpressionNode.parts.slice(0, firstPathIndex).join('.'));
+  let firstPathPart = pathExpressionNode.parts.slice(0, firstPathIndex);
+
+  if (pathExpressionNode.this) {
+    firstPathPart.unshift('this');
+  }
+
+  const path = builders.path(firstPathPart.join('.'));
   const literal = builders.literal(
     'StringLiteral',
     pathExpressionNode.parts.slice(firstPathIndex).join('.')
